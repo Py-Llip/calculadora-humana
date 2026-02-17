@@ -1,0 +1,62 @@
+@charset "UTF-8";
+ 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: grid;
+    grid-template: "resultado" 100px "expressao" 100px "digitacao" 300px / 1fr;
+}
+
+output, #expressao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+output {
+    background-color: white;
+    border: 2px solid black;
+
+}
+
+#expressao {
+    background-color: aqua;
+    border: 2px solid black;
+}
+
+#digitacao {
+    background-color: cadetblue;
+    border: 2px solid black;
+    display: grid;
+    grid-template: 1fr / 1fr 50px;
+}
+
+#digitacao input {
+    width: 50px;height: 50px;
+    font-size: 1em;
+}
+
+#digitacao #numeros {
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+#digitacao #numeros input {
+    flex: 1 1 33.33%;
+    height: 25%;
+}
+
+#digitacao #operadores {
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+#digitacao #operadores input {
+    flex: 1 1 auto;
+}
